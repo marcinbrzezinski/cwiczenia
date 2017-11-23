@@ -1,0 +1,7 @@
+# ignoruj pliki wykonywalny #
+
+*.o
+*.swp
+*.out
+
+# ? zastepuje jeden znak a * ciag znakow #
