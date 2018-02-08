@@ -1,33 +1,36 @@
 #include <stdio.h>
-#include <malloc.h>
-
-struct Dane{
-    int indeks;
-    int wartosc;
-};
-
-struct Wezel{
-    struct Dane dane;
-    struct Wezel *nast;
-};
-
-void push(struct Wezel **pTop, struct Dane dane){
-    struct Wezel *wezel;
-
-    wezel = (struct Wezel*)malloc(sizeof(struct Wezel));
-    if(wezel ==NULL){
-        printf("Brak pamieci!");
-        exit(EXIT_FAILURE);
-    }
-
-    wezel->dane = dane;
-    wezel->nast = NULL
-
-}
-
+#include "stos.h"
+#include "dane.h"
 
 int main() {
+    struct Wezel *top = NULL; //wskaznik stosu
+    struct Dane para;
+    struct Dane para_ze_stosu;
 
+    para.indeks = 1;
+    para.wartosc = 23;
+    push(&top, para);
 
+    para.indeks = 2;
+    para.wartosc = 62;
+    push(&top, para);
 
+    para.indeks = 3;
+    para.wartosc = -35;
+    push(&top, para);
+
+    para.indeks = 4;
+    para.wartosc = 13;
+    push(&top, para);
+
+    para_ze_stosu = pop(&top);
+    printf("(%d, %d) zdjety ze stosu\n",
+           para_ze_stosu.indeks, para_ze_stosu.wartosc);
+
+    printf("(%d, %d) najmlodszy na stosie\n",
+           peek(top).indeks, peek(top).wartosc);
+
+    print(top);
+
+    return 0;
 }
