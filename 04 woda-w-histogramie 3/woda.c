@@ -1,7 +1,23 @@
 #include "woda.h"
 
-int kiedyWzrasta(int popr, int nast, struct Wezel **pStos, int index){
+int slupWiekszyNizNaStosie(int popr, int nast, struct Wezel **pStos, int index){
+    return ()
+}
 
+int slupMniejszyNizNaStosie(int popr, int nast, struct Wezel **pStos, int index){
+    return (index - peek(*pStos).indeks) * (nast - popr);
+}
+
+int kiedyWzrasta(int popr, int nast, struct Wezel **pStos, int index){
+    if(isEmpty(*pStos)){
+        return 0;
+    }else if(peek(*pStos).wartosc <= nast){
+        // Sprawdzamy czy element na stosie jest mniejszy
+        // od aktualnego Slupa
+        return slupWiekszyNizNaStosie(popr, nast, &pStos, index);
+    }else{
+        return slupMniejszyNizNaStosie(popr, nast, &pStos, index);
+    }
 }
 
 
