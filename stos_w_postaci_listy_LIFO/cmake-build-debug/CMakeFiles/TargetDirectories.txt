@@ -1,0 +1,3 @@
+D:/Praca/Informatyka/jezyki_programowania/cwiczenia/stos_w_postaci_listy_LIFO/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Praca/Informatyka/jezyki_programowania/cwiczenia/stos_w_postaci_listy_LIFO/cmake-build-debug/CMakeFiles/stos_w_postaci_listy_LIFO.dir
+D:/Praca/Informatyka/jezyki_programowania/cwiczenia/stos_w_postaci_listy_LIFO/cmake-build-debug/CMakeFiles/edit_cache.dir
